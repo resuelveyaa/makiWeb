@@ -20,3 +20,6 @@ rad.json
 *.flf
 #Test results file
 TestResults.xml
+#MANUALES
+PRESENTACION_LOGO_MAKI.pdf
+MANUAL_MAKI_RESUMIDO.pdf

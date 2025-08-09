@@ -1,0 +1,55 @@
+/* css/style.css */
+
+/* Definición de la tipografía base */
+body {
+    font-family: 'Lato', sans-serif;
+    color: #383A2D; /* Verde Olivo para texto principal */
+    scroll-behavior: smooth;
+}
+
+/* Estilos para los títulos usando la fuente Serif */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+}
+
+/* Paleta de colores de la marca MAKI */
+.bg-maki-terracota { background-color: #A44936; }
+.text-maki-terracota { color: #A44936; }
+.border-maki-terracota { border-color: #A44936; }
+.hover\:bg-maki-terracota-dark:hover { background-color: #8A3C2B; }
+
+.bg-maki-rojo-oscuro { background-color: #7B221D; }
+.text-maki-rojo-oscuro { color: #7B221D; }
+
+.bg-maki-verde-olivo { background-color: #383A2D; }
+.text-maki-verde-olivo { color: #383A2D; }
+
+.bg-maki-crema { background-color: #FCF2EB; }
+.text-maki-crema { color: #FCF2EB; }
+
+/* Animación de entrada suave */
+.fade-in-up {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Estilo para el header "sticky" */
+#header-container header {
+    transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Estilo para las tarjetas de categoría */
+.category-card .overlay {
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.category-card:hover .overlay {
+    opacity: 1;
+}
