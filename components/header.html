@@ -1,13 +1,178 @@
-<header class="fixed top-0 left-0 w-full z-50">
-    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-        <a href="#"><img src="https://i.imgur.com/TqLqYt1.png" alt="Logotipo MAKI Arte & Tejidos" class="h-10"></a>
-        <nav class="hidden md:flex items-center space-x-8">
-            <a href="#inicio" class="text-maki-verde-olivo hover:text-maki-terracota transition-colors">Inicio</a>
-            <a href="#historia" class="text-maki-verde-olivo hover:text-maki-terracota transition-colors">Nuestra Historia</a>
-            <a href="#categorias" class="text-maki-verde-olivo hover:text-maki-terracota transition-colors">Colecciones</a>
-            <a href="#contacto" class="text-maki-verde-olivo hover:text-maki-terracota transition-colors">Contacto</a>
-        </nav>
-        <a href="#categorias" class="hidden md:inline-block bg-maki-terracota text-white font-bold py-2 px-6 rounded-full hover:bg-maki-terracota-dark transition-colors">Ver Tienda</a>
-        <button class="md:hidden text-maki-verde-olivo"><i class="fas fa-bars fa-lg"></i></button>
+<!-- Header Principal -->
+<header id="main-header" class="fixed top-0 left-0 w-full z-50 transition-all duration-300">
+    <div class="container mx-auto px-4 lg:px-6">
+        <div class="flex justify-between items-center h-20">
+            
+            <!-- Logo -->
+            <div class="logo-container">
+                <a href="#inicio" class="flex items-center space-x-3">
+                    <img src="https://i.imgur.com/TqLqYt1.png" alt="MAKI Arte & Tejidos" class="h-12 w-auto">
+                    <div class="hidden sm:block">
+                        <h1 class="text-xl font-bold text-maki-verde-olivo">MAKI</h1>
+                        <p class="text-xs text-maki-terracota font-medium tracking-wide">ARTE & TEJIDOS</p>
+                    </div>
+                </a>
+            </div>
+            
+            <!-- Navegación Principal (Desktop) -->
+            <nav class="hidden lg:flex items-center space-x-8">
+                <a href="#inicio" class="nav-link text-maki-verde-olivo font-medium py-2">Inicio</a>
+                <a href="#historia" class="nav-link text-maki-verde-olivo font-medium py-2">Nuestra Historia</a>
+                <a href="#categorias" class="nav-link text-maki-verde-olivo font-medium py-2">Colecciones</a>
+                <a href="#contacto" class="nav-link text-maki-verde-olivo font-medium py-2">Contacto</a>
+            </nav>
+            
+            <!-- Acciones del Header (Desktop) -->
+            <div class="hidden lg:flex items-center space-x-4">
+                <!-- Botón de Búsqueda -->
+                <button id="search-btn" class="p-2 text-maki-verde-olivo hover:text-maki-terracota transition-colors rounded-full hover:bg-white hover:bg-opacity-50">
+                    <i class="fas fa-search text-lg"></i>
+                </button>
+                
+                <!-- Carrito -->
+                <button class="relative p-2 text-maki-verde-olivo hover:text-maki-terracota transition-colors rounded-full hover:bg-white hover:bg-opacity-50">
+                    <i class="fas fa-shopping-bag text-lg"></i>
+                    <span class="cart-badge absolute -top-1 -right-1 bg-maki-terracota text-white text-xs rounded-full h-5 w-5 flex items-center justify-center font-bold">0</span>
+                </button>
+                
+                <!-- CTA Principal -->
+                <a href="#categorias" class="cta-button text-white font-bold py-3 px-6 rounded-full text-sm tracking-wide">
+                    VER TIENDA
+                </a>
+            </div>
+            
+            <!-- Botón Mobile Menu -->
+            <button id="mobile-menu-btn" class="lg:hidden menu-toggle p-3 rounded-full text-maki-verde-olivo">
+                <i class="fas fa-bars text-xl"></i>
+            </button>
+        </div>
+        
+        <!-- Barra de Búsqueda (Desktop) -->
+        <div id="search-container" class="search-container py-4">
+            <div class="max-w-md mx-auto">
+                <div class="relative">
+                    <input type="text" placeholder="Buscar productos..." class="search-input w-full py-3 px-4 pr-12 rounded-full focus:outline-none">
+                    <button class="absolute right-4 top-1/2 transform -translate-y-1/2 text-maki-terracota">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
     </div>
 </header>
+
+<!-- Mobile Menu -->
+<div id="mobile-menu" class="mobile-menu fixed top-0 right-0 h-full w-80 bg-white shadow-2xl z-40 lg:hidden">
+    <div class="p-6">
+        <div class="flex justify-between items-center mb-8">
+            <div class="flex items-center space-x-2">
+                <img src="https://i.imgur.com/TqLqYt1.png" alt="MAKI" class="h-8">
+                <span class="font-bold text-maki-verde-olivo">MAKI</span>
+            </div>
+            <button id="close-menu-btn" class="p-2 text-maki-verde-olivo">
+                <i class="fas fa-times text-xl"></i>
+            </button>
+        </div>
+        
+        <nav class="space-y-6">
+            <a href="#inicio" class="mobile-nav-link block text-maki-verde-olivo font-medium text-lg py-3 border-b border-gray-100">Inicio</a>
+            <a href="#historia" class="mobile-nav-link block text-maki-verde-olivo font-medium text-lg py-3 border-b border-gray-100">Nuestra Historia</a>
+            <a href="#categorias" class="mobile-nav-link block text-maki-verde-olivo font-medium text-lg py-3 border-b border-gray-100">Colecciones</a>
+            <a href="#contacto" class="mobile-nav-link block text-maki-verde-olivo font-medium text-lg py-3 border-b border-gray-100">Contacto</a>
+            
+            <div class="mobile-nav-link pt-6">
+                <a href="#categorias" class="block w-full bg-maki-terracota text-white font-bold py-4 px-6 rounded-full text-center">
+                    VER TIENDA
+                </a>
+            </div>
+        </nav>
+        
+        <!-- Mobile Search -->
+        <div class="mt-8">
+            <div class="relative">
+                <input type="text" placeholder="Buscar productos..." class="w-full py-3 px-4 pr-12 rounded-full border border-gray-200 focus:outline-none focus:border-maki-terracota">
+                <button class="absolute right-4 top-1/2 transform -translate-y-1/2 text-maki-terracota">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Cart -->
+        <div class="mt-6">
+            <button class="flex items-center justify-center w-full py-3 text-maki-verde-olivo border border-maki-verde-olivo rounded-full">
+                <i class="fas fa-shopping-bag mr-2"></i>
+                Carrito (0)
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- Overlay para mobile menu -->
+<div id="menu-overlay" class="fixed inset-0 bg-black bg-opacity-50 z-30 lg:hidden opacity-0 pointer-events-none transition-opacity duration-300"></div>
+
+<script>
+// JavaScript para funcionalidad del header moderno
+document.addEventListener('DOMContentLoaded', function() {
+    const header = document.getElementById('main-header');
+    const searchBtn = document.getElementById('search-btn');
+    const searchContainer = document.getElementById('search-container');
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const closeMenuBtn = document.getElementById('close-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const menuOverlay = document.getElementById('menu-overlay');
+    
+    // Efecto glassmorphism en scroll
+    window.addEventListener('scroll', function() {
+        if (window.scrollY > 50) {
+            header.classList.add('glass-effect');
+        } else {
+            header.classList.remove('glass-effect');
+        }
+    });
+    
+    // Toggle search bar
+    if (searchBtn) {
+        searchBtn.addEventListener('click', function() {
+            searchContainer.classList.toggle('active');
+        });
+    }
+    
+    // Close search when clicking outside
+    document.addEventListener('click', function(e) {
+        if (searchBtn && searchContainer && !searchBtn.contains(e.target) && !searchContainer.contains(e.target)) {
+            searchContainer.classList.remove('active');
+        }
+    });
+    
+    // Mobile menu
+    if (mobileMenuBtn) {
+        mobileMenuBtn.addEventListener('click', function() {
+            mobileMenu.classList.add('active');
+            menuOverlay.classList.remove('opacity-0', 'pointer-events-none');
+            document.body.style.overflow = 'hidden';
+        });
+    }
+    
+    function closeMobileMenu() {
+        if (mobileMenu && menuOverlay) {
+            mobileMenu.classList.remove('active');
+            menuOverlay.classList.add('opacity-0', 'pointer-events-none');
+            document.body.style.overflow = '';
+        }
+    }
+    
+    if (closeMenuBtn) {
+        closeMenuBtn.addEventListener('click', closeMobileMenu);
+    }
+    
+    if (menuOverlay) {
+        menuOverlay.addEventListener('click', closeMobileMenu);
+    }
+    
+    // Close mobile menu on link click
+    const mobileNavLinks = document.querySelectorAll('.mobile-nav-link a');
+    mobileNavLinks.forEach(link => {
+        link.addEventListener('click', closeMobileMenu);
+    });
+});
+</script>
